@@ -36,6 +36,10 @@
 
 **Repo onboarding:** Created initial README.md with all 10 required sections: title + tagline, what it is, demo scenarios, 4-agent pipeline, tech stack, repo layout, getting started (azd up), project status with links, team roster, license placeholder. Kept to ~150 lines; hackathon energy, scannable structure. README anchors first-time visitor on the 4-agent pipeline (Decoder → Planner → Drafter → Coach) and links to plan.md for depth.
 
+### 2026-05-20T13:13:48-04:00 — Initial Scaffolding Commit
+
+**Commit 8e44e61 pushed to origin/main:** All repo scaffolding committed and pushed to remote. Includes README.md, plan.md, .squad/ team structure (Tano, Bridger, Andor, Wren, Versio, Scribe, Ralph with charters), casting registry (Star Wars universe), .github/ workflows, .copilot/ skills, .gitattributes, and .gitignore. Repository is now ready for Squad operations.
+
 ## Recent Updates
 
 **2026-05-20** — Issues #1–#12 created (11 stories + 1 backlog tracker); GitHub Projects v2 board live at https://github.com/users/yortch/projects/4.
