@@ -51,4 +51,14 @@
 
 ## Recent Updates
 
+## Recent Updates
+
 **2026-05-20** — Issues #1–#12 created (11 stories + 1 backlog tracker); GitHub Projects v2 board live at https://github.com/users/yortch/projects/4.
+
+**2026-05-20 — Scaffold Sprint Coordination Complete**
+- **Orchestrated parallel fan-out:** Wren (Infra #9), Andor (API #2+#7), Bridger (Web #1). No PRs; all commits direct to develop for hackathon speed.
+- **Outcomes:** All three agents completed in parallel. Bicep validated (az bicep build exit 0). API endpoints scaffolded + stubbed. Web shell + proxy config ready. Seed data committed.
+- **Contract alignment:** Tano's sprint spec called for `{ summary, steps[], tone }`; Andor revised to `{ literal, subtext, urgency, tone, why }` (Decoder only; Planner adds steps[] later). Bridger updated DecodeResponse type to match.
+- **Blockers surfaced:** GPT-4o quota region-gated — must verify before `azd up`. SWA Free tier has no `/api` linking — web calls Functions URL directly.
+- **Next sprint:** Real GPT-4o Decoder, MAF multi-agent orchestration (Planner, Drafter, Coach), voice capture, Coach SSE, image grounding.
+- **All commits to origin/develop tagged for sprint; decision docs merged into .squad/decisions.md.**

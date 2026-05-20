@@ -17,3 +17,9 @@
 ## Recent Updates
 
 **2026-05-20** — Issues #1–#12 created (11 stories + 1 backlog tracker); GitHub Projects v2 board live at https://github.com/users/yortch/projects/4.
+
+**2026-05-20 — Scaffold Sprint Complete**
+- Delivered Story #9: Full Bicep + azure.yaml, all 8 modules + managed identity RBAC.
+- Resources: Log Analytics, Storage, Key Vault, OpenAI (GPT-4o), Speech, Functions FC1, SWA.
+- Region: eastus2 (primary) + 3 fallbacks. **⚠️ QUOTA VERIFICATION REQUIRED** before `azd up`.
+- Commit 2272617 to origin/develop. Status: Ready for deployment; awaiting quota check + first `azd up` run.
