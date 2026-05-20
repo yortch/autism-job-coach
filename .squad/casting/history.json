@@ -1,0 +1,22 @@
+{
+  "universe_usage_history": [
+    {
+      "universe": "Star Wars",
+      "assignment_id": "autism-coach-2026-05-20",
+      "used_at": "2026-05-20T16:19:07Z"
+    }
+  ],
+  "assignment_cast_snapshots": {
+    "autism-coach-2026-05-20": {
+      "universe": "Star Wars",
+      "agents": {
+        "lead": "Tano",
+        "frontend": "Bridger",
+        "backend": "Andor",
+        "infra": "Wren",
+        "tester": "Versio"
+      },
+      "created_at": "2026-05-20T16:19:07Z"
+    }
+  }
+}

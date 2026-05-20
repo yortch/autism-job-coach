@@ -1,0 +1,39 @@
+{
+  "agents": {
+    "tano": {
+      "persistent_name": "Tano",
+      "universe": "Star Wars",
+      "created_at": "2026-05-20T16:19:07Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "bridger": {
+      "persistent_name": "Bridger",
+      "universe": "Star Wars",
+      "created_at": "2026-05-20T16:19:07Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "andor": {
+      "persistent_name": "Andor",
+      "universe": "Star Wars",
+      "created_at": "2026-05-20T16:19:07Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "wren": {
+      "persistent_name": "Wren",
+      "universe": "Star Wars",
+      "created_at": "2026-05-20T16:19:07Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "versio": {
+      "persistent_name": "Versio",
+      "universe": "Star Wars",
+      "created_at": "2026-05-20T16:19:07Z",
+      "legacy_named": false,
+      "status": "active"
+    }
+  }
+}
