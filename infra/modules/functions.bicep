@@ -81,7 +81,7 @@ resource functionApp 'Microsoft.Web/sites@2023-12-01' = {
         storage: {
           // Deployment packages land in this blob container; auth via system MI
           type: 'blobContainer'
-          value: 'https://${storageAccountName}.blob.core.windows.net/deployments'
+          value: 'https://${storageAccountName}.blob.${environment().suffixes.storage}/deployments'
           authentication: {
             type: 'SystemAssignedIdentity'
           }

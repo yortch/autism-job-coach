@@ -68,20 +68,92 @@ autism-coach/
 
 ## Getting Started
 
-### Prereqs
+### Prerequisites
 
-- Node.js 20+
-- [Azure CLI](https://learn.microsoft.com/cli/azure)
-- [Azure Developer CLI (`azd`)](https://learn.microsoft.com/azure/developer/azure-developer-cli)
-- [Azure Functions Core Tools](https://learn.microsoft.com/en-us/azure/azure-functions/functions-run-local) (v4)
+| Tool | Version | Install |
+|---|---|---|
+| Node.js | 20+ | https://nodejs.org |
+| Azure CLI | latest | https://learn.microsoft.com/cli/azure/install-azure-cli |
+| Azure Developer CLI (`azd`) | latest | https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd |
+| Azure Functions Core Tools | v4 | https://learn.microsoft.com/azure/azure-functions/functions-run-local |
+
+### ⚠️ Before You Deploy — Verify GPT-4o Quota
+
+Azure OpenAI GPT-4o capacity is region-gated. **Check before running `azd up`:**
+
+```bash
+az login
+az cognitiveservices usage list \
+  --location eastus2 \
+  --query "[?name.value=='OpenAI.Standard.gpt-4o']" \
+  -o table
+```
+
+If `currentValue` is at or near `limit`, choose a fallback region: `swedencentral`, `uksouth`, or `eastus`.  
+Request a quota increase at https://aka.ms/oai/quotaincrease if needed.
 
 ### Deploy
 
 ```bash
+# 1. Authenticate
+azd auth login
+
+# 2. Initialize environment (one-time; pick eastus2 or a region with GPT-4o quota)
+azd env new autism-coach-dev
+azd env set AZURE_LOCATION eastus2
+
+# 3. Deploy everything (infra + api + web)
 azd up
 ```
 
-One command deploys the full stack (Functions, Static Web Apps, OpenAI, Speech, storage, monitoring) to your Azure subscription.
+`azd up` provisions all Azure resources via Bicep, then builds and deploys the Functions API and Static Web App. End-to-end takes ~8–12 minutes on first run.
+
+### Deployed Resources
+
+| Resource | Description |
+|---|---|
+| Resource Group | `rg-autism-coach-dev` (auto-created by azd) |
+| Log Analytics + App Insights | Observability; connection string wired to Functions automatically |
+| Storage Account | Flex Consumption deployment packages + future image uploads |
+| Azure Functions (Flex Consumption, Node 20) | API host: `/api/decode`, `/api/draft`, `/api/coach`, `/api/scenarios` |
+| Static Web App (Free) | React + Vite PWA frontend |
+| Azure OpenAI (GPT-4o) | `gpt-4o` deployment, Standard SKU, 10k TPM default |
+| Azure AI Speech | STT + TTS; same region as all resources |
+| Key Vault | Secrets store; Functions identity has Secrets User access |
+
+### Environment Variables (post-deploy)
+
+After `azd up` completes, dump the wired env vars with:
+
+```bash
+azd env get-values
+```
+
+Key outputs:
+
+| Variable | Description |
+|---|---|
+| `AZURE_OPENAI_ENDPOINT` | OpenAI account endpoint (used by Functions) |
+| `AZURE_OPENAI_DEPLOYMENT` | Deployment name (`gpt-4o`) |
+| `AZURE_OPENAI_API_VERSION` | REST API version (`2024-10-21`) |
+| `AZURE_SPEECH_ENDPOINT` | Speech service endpoint |
+| `AZURE_SPEECH_REGION` | Region for Speech SDK initialisation |
+| `FUNCTION_ENDPOINT` | Functions base URL (`https://func-*.azurewebsites.net`) |
+| `SWA_HOSTNAME` | Static Web App hostname |
+
+All secrets use **system-assigned managed identity** — no API keys or connection strings are stored in environment variables or committed to git.
+
+### Local Development
+
+```bash
+# API (Azure Functions)
+cd api && npm install && npm run start
+# → Functions runs at http://localhost:7071
+
+# Web (React + Vite)
+cd web && npm install && npm run dev
+# → Vite proxies /api/* → http://localhost:7071
+```
 
 **Note:** Scaffolding (dependencies, test harnesses, CI/CD) is in progress. See GitHub Issues [#1–#11](https://github.com/yortch/autism-job-coach/issues) for tracked work.
 
