@@ -1,3 +1,8 @@
+# API build artifacts and local config
+api/node_modules/
+api/dist/
+api/local.settings.json
+
 # Squad: ignore runtime state (logs, inbox, sessions)
 .squad/orchestration-log/
 .squad/log/

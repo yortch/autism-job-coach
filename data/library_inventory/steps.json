@@ -1,0 +1,67 @@
+[
+  {
+    "id": "shelf-read",
+    "name": "Shelf-Read a Section",
+    "description": "Verify books are in correct Dewey Decimal order and fix misplaced items",
+    "steps": [
+      "Start at the left end of the first shelf in the section.",
+      "Check that the Dewey number on each spine label is equal to or greater than the one before it.",
+      "If a book is out of order, pull it out and lay it on top of the shelf.",
+      "Continue shelf-by-shelf, working left to right, top shelf to bottom.",
+      "Once you reach the end of the section, return each pulled book to its correct position.",
+      "Report any book you cannot find a correct position for to the librarian."
+    ]
+  },
+  {
+    "id": "weeding-check",
+    "name": "Weeding Check",
+    "description": "Identify books in a section that should be considered for removal from the collection",
+    "steps": [
+      "Pull any book with a publication date more than 10 years old (check the copyright page inside the cover).",
+      "Check the circulation record sticker or system — if the book has not been checked out in 5+ years, flag it.",
+      "Inspect physical condition: torn cover, loose pages, water damage, or faded spine label — flag for withdrawal.",
+      "Place each flagged book on the weeding cart, face-up, with a sticky note showing the section (e.g., '630s').",
+      "Do NOT mark books as withdrawn yourself — leave that final decision to the librarian.",
+      "Record the count of flagged items on the shift log."
+    ]
+  },
+  {
+    "id": "hold-pull",
+    "name": "Pull a Hold",
+    "description": "Locate a patron's reserved book and prepare it for pickup",
+    "steps": [
+      "Find the hold request — note the patron's name and the book's full call number.",
+      "Go to the section indicated by the Dewey number on the hold slip.",
+      "Scan the shelf in call-number order until you find the matching title.",
+      "If found, place the hold slip inside the front cover and bring the book to the holds shelf.",
+      "Check the book in on the system so the patron's account shows it is ready for pickup.",
+      "If the book is not on the shelf, check the returns cart and sorting area; if still missing, notify the librarian to mark it as missing."
+    ]
+  },
+  {
+    "id": "cart-sort",
+    "name": "Sort the Returns Cart",
+    "description": "Arrange returned books into shelf order before re-shelving",
+    "steps": [
+      "Separate materials by collection: nonfiction, fiction, children's, large-print, and reference.",
+      "Within nonfiction, sort by Dewey Decimal number from lowest to highest (e.g., 001 before 813).",
+      "Within fiction, sort alphabetically by the author's last name.",
+      "Within children's, sort picture books alphabetically by author and easy readers by reading level.",
+      "Place each sorted group on a designated section of the cart, ready for shelving.",
+      "Re-shelve starting from the section closest to the returns desk to minimise travel time."
+    ]
+  },
+  {
+    "id": "withdrawn-sweep",
+    "name": "Withdrawn-Item Sweep",
+    "description": "Remove any books stamped WITHDRAWN that are still on the open shelves",
+    "steps": [
+      "Walk each aisle and look for books with a WITHDRAWN stamp on the page edges or cover.",
+      "Also check for books with a spine label marked 'W/D' or 'DISCARD'.",
+      "Pull each withdrawn item from the shelf and place it on the designated discard cart.",
+      "Do not place withdrawn items on the returns cart — they are not to be re-shelved.",
+      "Report the count and section to the librarian at the end of your sweep.",
+      "If a patron is holding a withdrawn item, politely explain it is not available and offer to help find an alternative."
+    ]
+  }
+]

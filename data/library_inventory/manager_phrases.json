@@ -1,0 +1,62 @@
+[
+  {
+    "phrase": "Can you tidy the 800s?",
+    "decoded": {
+      "literal": "Perform a shelf-read in the 800s (Literature) section and return any out-of-order books to their correct position.",
+      "subtext": "The 800s section has likely been browsed heavily and books may be out of Dewey Decimal order. The manager wants it neat for patrons.",
+      "urgency": "low",
+      "tone": "casual",
+      "why": "In library vocabulary, 'tidy' means shelf-read. The 800s are the Literature section in Dewey Decimal. No deadline was implied, so this is routine maintenance at your own pace."
+    }
+  },
+  {
+    "phrase": "We have a hold that needs pulling before we close.",
+    "decoded": {
+      "literal": "Locate the reserved book by its call number and place it on the holds shelf before the library closes today.",
+      "subtext": "A patron may arrive to collect this book today. If it is not ready, they will have wasted a trip. This is time-sensitive.",
+      "urgency": "high",
+      "tone": "direct",
+      "why": "The phrase 'before we close' sets an explicit deadline. Holds that are not pulled on time reflect poorly on service and may require an apology to the patron."
+    }
+  },
+  {
+    "phrase": "The nonfiction section looks rough — can you do a shelf-read?",
+    "decoded": {
+      "literal": "The nonfiction section (Dewey 000–999) is visibly disorganised. Please check every shelf in sequence and correct any out-of-order books.",
+      "subtext": "The manager has already noticed the problem, meaning it is obvious to patrons too. They want it fixed today but are not panicked.",
+      "urgency": "medium",
+      "tone": "apologetic",
+      "why": "Saying a section 'looks rough' is the manager's polite way of flagging a visible problem without blaming you. It implies the task is somewhat urgent — more so than routine maintenance — but not a crisis."
+    }
+  },
+  {
+    "phrase": "When you get a chance, can you weed the 600s?",
+    "decoded": {
+      "literal": "When your current tasks are done, review the 600s (Technology/Applied Sciences) section and flag old, damaged, or rarely-borrowed books for possible removal.",
+      "subtext": "This is a low-priority background task. The manager is giving you the discretion to fit it in around your workload.",
+      "urgency": "low",
+      "tone": "polite",
+      "why": "'When you get a chance' is a social phrase meaning the task is not urgent. Weeding is a careful, deliberate process — the manager expects you to use your judgment about which books to flag and is not expecting immediate results."
+    }
+  },
+  {
+    "phrase": "Can you check if we have any withdrawn items that need to come off the floor?",
+    "decoded": {
+      "literal": "Walk through the stacks and look for books stamped WITHDRAWN that are still on the open shelves, then remove them.",
+      "subtext": "Withdrawn books on the floor can confuse patrons and cause inventory errors. The manager wants a quality-control sweep.",
+      "urgency": "medium",
+      "tone": "neutral",
+      "why": "Withdrawn items on open shelves can be accidentally checked out, causing system discrepancies and patron frustration. This is a data-accuracy and customer-experience task, not just tidying."
+    }
+  },
+  {
+    "phrase": "Can you get through the returns cart? It's pretty backed up.",
+    "decoded": {
+      "literal": "Sort and re-shelve the books on the returns cart, which currently has a large backlog.",
+      "subtext": "A backed-up cart means the shelves are thin on popular titles patrons want to browse. The manager wants the collection accessible again.",
+      "urgency": "medium",
+      "tone": "casual",
+      "why": "'Pretty backed up' signals the backlog is larger than usual. Sorting and shelving returns is a visible, patron-facing task — a cleared cart signals the library is well-managed."
+    }
+  }
+]

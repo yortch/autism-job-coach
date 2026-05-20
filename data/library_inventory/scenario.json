@@ -1,0 +1,46 @@
+{
+  "id": "library-inventory",
+  "name": "Library Inventory",
+  "description": "Shelving and inventory management for a public library",
+  "vocabulary": [
+    {
+      "term": "shelf-read",
+      "definition": "Scanning every book on a shelf to verify they are in correct Dewey Decimal order and flagging misplaced items"
+    },
+    {
+      "term": "weeding",
+      "definition": "Reviewing the collection to identify and remove old, damaged, or outdated books from circulation"
+    },
+    {
+      "term": "hold",
+      "definition": "A book reserved for a specific patron; must be pulled from the shelf and placed on the holds shelf for pickup"
+    },
+    {
+      "term": "withdrawn",
+      "definition": "A book officially removed from the library collection; stamped WITHDRAWN and disposed of per policy"
+    },
+    {
+      "term": "Dewey Decimal",
+      "definition": "The numbering system used to organize nonfiction books by subject (e.g., 800s = Literature, 600s = Technology)"
+    },
+    {
+      "term": "spine label",
+      "definition": "The small sticker on a book's spine showing its call number, used to determine correct shelf position"
+    },
+    {
+      "term": "call number",
+      "definition": "The combination of Dewey number and author cutter code that gives a book its unique shelf address"
+    },
+    {
+      "term": "returns cart",
+      "definition": "The trolley where checked-in books wait before being sorted and re-shelved"
+    }
+  ],
+  "commonAsks": [
+    "Can you tidy the 800s?",
+    "We have a hold that needs pulling before we close.",
+    "The nonfiction section looks rough — can you do a shelf-read?",
+    "When you get a chance, can you weed the 600s?",
+    "Can you check if we have any withdrawn items that need to come off the floor?"
+  ]
+}

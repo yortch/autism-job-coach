@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: autism-coach
+
+metadata:
+  template: autism-coach@0.1.0
+
+infra:
+  provider: bicep
+  path: infra
+  module: main
+
+services:
+  # React + Vite PWA — deployed to Azure Static Web Apps
+  web:
+    project: ./web
+    host: staticwebapp
+    dist: dist
+
+  # Azure Functions API (Node.js v20, TypeScript v4 model)
+  api:
+    project: ./api
+    host: function
+    language: ts
