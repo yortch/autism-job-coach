@@ -8,3 +8,6 @@
 .squad-workstream
 # Scribe: temp file from commit message generation
 .commit-msg
+# Web frontend
+web/node_modules/
+web/dist/

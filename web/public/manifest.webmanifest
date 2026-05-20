@@ -1,0 +1,10 @@
+{
+  "name": "Autism Job Coach",
+  "short_name": "Job Coach",
+  "description": "Helps neurodivergent employees decode workplace instructions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#1a73e8",
+  "icons": []
+}
