@@ -32,6 +32,10 @@
 - Text decode (#3) is a Bridger-owned UI-only story; shares agent-decoder + api-decode-endpoint with voice decode (#2, Andor-owned).
 - Backlog tracking issue (#12) uses `squad:tano` + `hackathon` labels only (no `user-story`).
 
+### 2026-05-20 — README.md Authored
+
+**Repo onboarding:** Created initial README.md with all 10 required sections: title + tagline, what it is, demo scenarios, 4-agent pipeline, tech stack, repo layout, getting started (azd up), project status with links, team roster, license placeholder. Kept to ~150 lines; hackathon energy, scannable structure. README anchors first-time visitor on the 4-agent pipeline (Decoder → Planner → Drafter → Coach) and links to plan.md for depth.
+
 ## Recent Updates
 
 **2026-05-20** — Issues #1–#12 created (11 stories + 1 backlog tracker); GitHub Projects v2 board live at https://github.com/users/yortch/projects/4.
