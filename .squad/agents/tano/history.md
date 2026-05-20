@@ -10,6 +10,15 @@
 <!-- Append new learnings below. Each entry is something lasting about the project. -->
 
 - Plan of record is `plan.md` at repo root. 19 todos seeded in the SQL `todos` table with dependencies in `todo_deps`.
+
+### 2026-05-20T13:18:49-04:00 — Scaffold Sprint Coordination
+
+**Develop branch created** and pushed to origin. Scoped scaffold sprint with stories #1, #2, #7, #9 moved to "In Progress" on project board. Per-agent work documented in `.squad/decisions/tano-scaffold-sprint.md`:
+  - **Wren (Story #9):** Bicep + azure.yaml → `azd up` success. Resources: SWA, Flex Functions, OpenAI GPT-4o (quota risk!), Azure Speech.
+  - **Andor (Stories #2 + #7):** api/ folder with GET /api/scenarios, POST /api/decode (stubbed). Seed data: 3 examples each in scenario/steps/manager_phrases JSON.
+  - **Bridger (Story #1):** Scenario picker (React + Vite) + decode view showing JSON. Plain styling, no CSS framework.
+  - **All three:** Parallel work on develop. No PRs (hackathon speed); commits include Co-authored-by trailer. Integration test: `azd up` on clean subscription.
+  - **Known risks:** OpenAI quota region, CORS, bicep syntax. Covered in sprint decision doc.
 - Primary demo: library inventory. Coffee shop ships as seed data only if time runs short.
 - Four-agent MAF pipeline: Decoder → Planner → Drafter → Coach. Decoder + Drafter answer "what did the manager actually mean?"; Planner + Coach handle "walk me through it."
 - Hackathon dates: 2026-05-20 / 2026-05-21.
